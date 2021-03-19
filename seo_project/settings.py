@@ -77,8 +77,14 @@ WSGI_APPLICATION = 'seo_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dchk7n8o9bkoa', 
+        'USER': 'hhibaujukryjbh', 
+        'PASSWORD': 'b6463b9b28daacbee1f0e15280e5c14f9b6f181e41ad9e3c4a07110422b4a2c8',
+        'HOST': 'ec2-52-71-161-140.compute-1.amazonaws.com', 
+        'PORT': '5432',
     }
 }
 
