@@ -64,11 +64,11 @@
                                 <p>
                                     Please Copy the text below and post it as a comment to the Top 5 youtube videos below <br>
 								</p>
-                                <textarea cols="25" rows="3">{{ Comment | safe }}</textarea>
+                                <textarea id="textarea" cols="25" rows="3">{{ Comment | safe }}</textarea>
                             </div>
                             <div class="app-download-main animated bounceIn animation-delay-1000">
                                 <div class="button-wrapper">
-                                    <button id="b-1" data-param1="COD Mobile++" onclick="unlockb2()" class="button animated pulse infinite"><span>Copy Comment</span></button>
+                                    <button id="b-1" data-param1="COD Mobile++"  class="button animated pulse infinite"><span>Copy Comment</span></button>
                                 </div>
                             </div>
                             <br>
@@ -117,6 +117,14 @@
         document.getElementById("b-2").disabled= true;
         document.getElementById("b-3").disabled= true;
         document.getElementById("b-4").disabled= true;
+
+        document.querySelector("button").onclick = function(){
+                document.querySelector("textarea").select();
+                document.execCommand('copy');
+                alert("The comment is copied")
+                document.getElementById("b-2").disabled = false;
+            }
+        
 
         console.log("click");
         function unlockb2() {
