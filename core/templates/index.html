@@ -68,7 +68,7 @@
                             </div>
                             <div class="app-download-main animated bounceIn animation-delay-1000">
                                 <div class="button-wrapper">
-                                    <div id="b-1" data-param1="COD Mobile++" class="button animated pulse infinite"><span>Copy Comment</span></div>
+                                    <button id="b-1" data-param1="COD Mobile++" onclick="unlockb2()" class="button animated pulse infinite"><span>Copy Comment</span></button>
                                 </div>
                             </div>
                             <br>
@@ -77,7 +77,7 @@
                             </p>
                                 <div class="app-download-main animated bounceIn animation-delay-1000">
                                 <div class="button-wrapper">
-                                    <button id="b-1" data-param1="COD Mobile++" class="button2 animated pulse infinite"><span>Visit Video</span></button>
+                                    <button id="b-2" data-param1="COD Mobile++" onclick="unlockb3()" class="button2 animated pulse infinite"><span>Visit Video</span></button>
                                 </div>
                             </div>
                         </div>
@@ -92,11 +92,11 @@
                             </div>
                             <div class="app-download-main animated bounceIn animation-delay-1000">
                                 <div class="button-wrapper">
-                                    <button id="b-1" data-param1="COD Mobile++" class="button2 animated pulse infinite" onclick="enableButton2()"><span>Subscribe</span></button>
+                                    <button id="b-3" data-param1="COD Mobile++" onclick="unlockb4()" class="button2 animated pulse infinite" onclick="enableButton2()"><span>Subscribe</span></button>
                                 </div>
                             </div>
                             <p>When you are done like the comments on the videos above and subscribe the channel, you can click or tap on the continue button below.</p>
-                            <button id="button-2" class="button"><span> Continue </span></button>
+                            <button id="b-4" class="button3"><span> Continue </span></button>
                         </div>
                     </div>
                 </div>
@@ -114,8 +114,22 @@
     
     <!-- JS -->
     <script>
-        function enableButton2() {
-            document.getElementById("button-2").disabled = false;
+        document.getElementById("b-2").disabled= true;
+        document.getElementById("b-3").disabled= true;
+        document.getElementById("b-4").disabled= true;
+
+        console.log("click");
+        function unlockb2() {
+            document.getElementById("b-2").disabled = false;
+            console.log("disable false")
+        }
+        function unlockb3() {
+            document.getElementById("b-3").disabled = false;
+            console.log("disable false")
+        }
+        function unlockb4() {
+            document.getElementById("b-4").disabled = false;
+            console.log("disable false")
         }
     </script>
     
