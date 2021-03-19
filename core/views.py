@@ -11,7 +11,6 @@ def home(request):
     rand_comment = random.sample(Comments_query, 1)
     rand_cmnt_lnk = random.sample(Comment_Links_query, 1)
     rand_channel = random.sample(Channels_query, 1)
-    print(rand_comment[0],rand_cmnt_lnk[0],rand_channel[0])
     
     context ={
         'Comment' : rand_comment[0],
