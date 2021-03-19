@@ -62,22 +62,22 @@
                                 <br>
                                 <span>Step 1</span>
                                 <p>
-                                    Please Copy the text below and post it as a comment to the Top 5 youtube videos below <br>
+                                    Please Copy the text below and post it as a comment to the  youtube videos below <br>
 								</p>
-                                <textarea cols="35" rows="3">{{ Comment | safe }}</textarea>
+                                <textarea id="textarea" cols="25" rows="3">{{ Comment | safe }}</textarea>
                             </div>
                             <div class="app-download-main animated bounceIn animation-delay-1000">
                                 <div class="button-wrapper">
-                                    <div id="b-1" data-param1="COD Mobile++" class="button animated pulse infinite"><span>Copy Comment</span></div>
+                                    <button id="b-1" data-param1="COD Mobile++"  class="button animated pulse infinite"><span>Copy Comment</span></button>
                                 </div>
                             </div>
                             <br>
                             <p> 
-                                Click the "Visit Videos" button below and paste the comment you just copied to the first 5 videos.<br> Like the comments after you posted them.
+                                Click the "Visit Video" button below and paste the comment you just copied to under the  video.<br> Like the comment after you post it.
                             </p>
                                 <div class="app-download-main animated bounceIn animation-delay-1000">
                                 <div class="button-wrapper">
-                                    <button id="b-1" data-param1="COD Mobile++" class="button2 animated pulse infinite" onclick="window.open('{{ Video }}')"><span>Visit Video</span></button>
+                                    <button id="b-2" data-param1="COD Mobile++" onclick="unlockb3()" class="button2 animated pulse infinite"><span>Visit Video</span></button>
                                 </div>
                             </div>
                         </div>
@@ -92,11 +92,11 @@
                             </div>
                             <div class="app-download-main animated bounceIn animation-delay-1000">
                                 <div class="button-wrapper">
-                                    <button id="b-1" data-param1="COD Mobile++" class="button2 animated pulse infinite" onclick="enableButton2() window.open('{{ Channel }}')"><span>Subscribe</span></button>
+                                    <button id="b-3" data-param1="COD Mobile++" onclick="unlockb4()" class="button2 animated pulse infinite" onclick="enableButton2()"><span>Subscribe</span></button>
                                 </div>
                             </div>
-                            <p>When you are done like the comments on the videos above and subscribe the channel, you can click or tap on the continue button below.</p>
-                            <button id="button-2" class="button"><span> Continue </span></button>
+                            <p>When you are done like the comment on the video above and subscribe the channel, you can click or tap on the continue button below.</p>
+                            <button id="b-4" onclick="alerfunct()" class="button3"><span> Continue </span></button>
                         </div>
                     </div>
                 </div>
@@ -114,8 +114,29 @@
     
     <!-- JS -->
     <script>
-        function enableButton2() {
-            document.getElementById("button-2").disabled = false;
+        document.getElementById("b-2").disabled= true;
+        document.getElementById("b-3").disabled= true;
+        document.getElementById("b-4").disabled= true;
+
+        document.querySelector("button").onclick = function(){
+                document.querySelector("textarea").select();
+                document.execCommand('copy');
+                alert("The comment is copied..!!!")
+                document.getElementById("b-2").disabled = false;
+            }
+        function unlockb2() {
+            document.getElementById("b-2").disabled = false;
+        }
+        function unlockb3() {
+            document.getElementById("b-3").disabled = false;
+            window.open('{{ Video }}')
+        }
+        function unlockb4() {
+            document.getElementById("b-4").disabled = false;
+            window.open('{{ Channel }}')
+        }
+        function alertfunc() {
+            alert("Continue Button Pressed")
         }
     </script>
     
