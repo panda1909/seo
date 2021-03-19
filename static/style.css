@@ -1,0 +1,880 @@
+        /*--------------------------------------------------------------
+# Basics
+--------------------------------------------------------------*/
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        html {
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        textarea,
+        input,
+        a,
+        button {
+            outline: none;
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        /*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+        
+        body {
+            font-family: 'Righteous', cursive;
+            font-size: 16px;
+            color: #fff;
+        }
+        
+        a {
+            -webkit-transition: all 0.2s ease-in-out 0s;
+            -moz-transition: all 0.2s ease-in-out 0s;
+            -ms-transition: all 0.2s ease-in-out 0s;
+            -o-transition: all 0.2s ease-in-out 0s;
+            transition: all 0.2s ease-in-out 0s;
+        }
+        
+        a:hover,
+        a:visited,
+        a:focus,
+        a:active,
+        button:hover,
+        button:visited,
+        button:active,
+        button:focus;
+        {
+            text-decoration: none !important;
+            outline: none !important;
+        }
+        
+         ::selection {
+            background: #000;
+            color: #fff;
+            text-shadow: none;
+        }
+        
+         ::-moz-selection {
+            background: #000;
+            color: #fff;
+            text-shadow: none;
+        }
+        /*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+        
+        .animation-delay-100 {
+            -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+        }
+        
+        .animation-delay-200 {
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+        
+        .animation-delay-300 {
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+        }
+        
+        .animation-delay-400 {
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+        }
+        
+        .animation-delay-600 {
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+        
+        .animation-delay-800 {
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+        }
+        
+        .animation-delay-1000 {
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+        
+        .animation-delay-1200 {
+            -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+        }
+        
+        .animation-delay-1400 {
+            -webkit-animation-delay: 1.4s;
+            animation-delay: 1.4s;
+        }
+        
+        .animation-delay-1600 {
+            -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+        }
+        
+        .animation-delay-1800 {
+            -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s;
+        }
+        
+        .animation-delay-2000 {
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+        /*--------------------------------------------------------------
+# Background
+--------------------------------------------------------------*/
+        
+        #bg {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 60%;
+            z-index: -20;
+            background: url("urn:scrapbook:download:error:https://bgroundtool.com/apps/img/main-bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 bottom;
+        }
+        
+        #bg:after {
+            height: 55%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            display: block;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#15151e+0,15151e+98&0+0,1+56 */
+            background: -moz-linear-gradient(top, rgba(21, 21, 30, 0) 0%, rgba(21, 21, 30, 1) 56%, rgba(21, 21, 30, 1) 98%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(21, 21, 30, 0) 0%, rgba(21, 21, 30, 1) 56%, rgba(21, 21, 30, 1) 98%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(21, 21, 30, 0) 0%, rgba(21, 21, 30, 1) 56%, rgba(21, 21, 30, 1) 98%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#0015151e', endColorstr='#15151e', GradientType=0);
+            /* IE6-9 */
+        }
+        
+        #bg-c {
+            height: 50%;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: block;
+            background: #15151e;
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        /*--------------------------------------------------------------
+# Status
+--------------------------------------------------------------*/
+        
+        .app-download-status {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: -35px;
+            text-align: center;
+        }
+        
+        .app-download-status-content {
+            display: table;
+            margin: 0 auto;
+            background: #10a9db;
+            padding: 15px 0 12px 0;
+            border: 3px solid rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            box-shadow: 0 -3px 5px 0 rgba(0, 0, 0, 0.6);
+        }
+        
+        .status-row {
+            display: inline-block;
+            max-width: 150px;
+            padding: 0 15px;
+            margin: 0 5px;
+            position: relative;
+            z-index: 5;
+        }
+        
+        .status-row:after {
+            content: '';
+            width: 2px;
+            height: 20px;
+            right: -3.5px;
+            top: 10px;
+            display: block;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        
+        .status-row:last-child:after {
+            display: none;
+        }
+        
+        .status-label {
+            font-size: 0.9em;
+            font-weight: 300;
+            text-transform: uppercase;
+            display: block;
+            line-height: 1;
+            margin: 0 0 5px 0;
+            color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .status-dynamic {
+            font-size: 1em;
+            font-weight: 700;
+            display: block;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+            line-height: 1;
+        }
+        /*--------------------------------------------------------------
+# App Download
+--------------------------------------------------------------*/
+        
+        .app-download-section {
+            position: relative;
+            padding: 40px 0 80px 0;
+            overflow: hidden;
+        }
+        
+        .logo-img {
+            max-width: 450px;
+            display: table;
+            margin: 0 auto 60px auto;
+        }
+        
+        .app-download-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #1d1d27;
+            padding: 50px 70px 70px 70px;
+            position: relative;
+            border-radius: 50px;
+            color: #fff;
+            box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+        }
+        
+        .app-icon-wrapper {
+            position: relative;
+            left: 0;
+            width: 100%;
+            top: 0;
+        }
+        
+        .app-icon-inner-wrapper {
+            background: #15151e;
+            padding: 15px;
+            display: table;
+            margin: 0 auto 10px auto;
+            border-radius: 50%;
+        }
+        
+        .app-icon-wrapper img {
+            max-width: 180px;
+            border-radius: 50%;
+        }
+        
+        .app-download-content {
+            text-align: center;
+        }
+        
+        .app-download-content-header {
+            position: relative;
+        }
+        
+        .app-download-content h1 {
+            margin: 0;
+            font-size: 1.6em;
+        }
+        
+        .app-download-content-header span {
+            display: block;
+            font-size: 2em;
+            color: #10a9db;
+        }
+        
+        .app-download-main p.app-download-intro-text {
+            font-size: 1.4em;
+            color: #597b9b;
+            font-weight: 300;
+            margin: 5px auto 0 auto;
+        }
+        /*--------------------------------------------------------------
+# Loading Files / Connecting
+--------------------------------------------------------------*/
+        
+        .loading-files-wrapper .loader {
+            color: #10a9db;
+            font-size: 50px;
+        }
+        
+        .loading-files-wrapper .console-msg {
+            font-size: 3em;
+        }
+        
+        .loading-files-wrapper .console-loadbar {
+            margin-top: 20px;
+            background: #15151e;
+        }
+        /*--------------------------------------------------------------
+# Platform Select
+--------------------------------------------------------------*/
+        
+        .platform-select-text {
+            color: #fff;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        
+        .platform-field-wrapper {
+            position: relative;
+        }
+        
+        .platform-item {
+            background: #15151e;
+            border-radius: 20px;
+            padding: 20px 10px;
+            position: relative;
+            text-align: center;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently
+                                     supported by Chrome, Opera and Firefox */
+        }
+        
+        .platform-item i {
+            font-size: 2.8em;
+            display: block;
+            color: #ffc107;
+        }
+        
+        .platform-item span {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            margin-top: 4px;
+            display: block;
+        }
+        
+        .platform-item.active {
+            background: #fff;
+        }
+        
+        .platform-item.active i {
+            color: #ccc;
+        }
+        
+        .platform-item.active span {
+            color: #000;
+        }
+        /*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
+        
+        .mfp-bg {
+            background: #10a9db;
+        }
+        
+        .not-visible {
+            visibility: hidden !important;
+        }
+        
+        .master-modal {
+            margin: 0 auto;
+            position: relative;
+            color: #333;
+            border-radius: 30px;
+            max-width: 750px;
+        }
+        
+        .console-loader-wrapper {
+            position: relative;
+        }
+        
+        .console-content {
+            text-align: center;
+        }
+        
+        .console-msg-wrapper {
+            position: relative;
+            margin: 25px 0 0 0;
+            height: 100px;
+        }
+        
+        .console-msg {
+            font-size: 4em;
+            color: #fff;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+        
+        .console-loadbar {
+            width: 90%;
+            max-width: 500px;
+            padding: 10px 15px;
+            display: table;
+            margin: 150px auto 0 auto;
+            background: rgba(0, 0, 0, 0.5);
+            -webkit-transition: all 0.2s ease-in-out 0s;
+            -moz-transition: all 0.2s ease-in-out 0s;
+            -ms-transition: all 0.2s ease-in-out 0s;
+            -o-transition: all 0.2s ease-in-out 0s;
+            transition: all 0.2s ease-in-out 0s;
+            border-radius: 10px;
+        }
+        
+        .console-loadbar div {
+            font-size: 20px;
+            text-indent: 9999px;
+            overflow: hidden;
+            background: #4fe16b;
+            border-radius: 10px;
+        }
+        
+        .console-msg-error {
+            color: #fc4349;
+        }
+        /*--------------------------------------------------------------
+# Verification
+--------------------------------------------------------------*/
+        
+        .human-verification-wrapper {
+            position: relative;
+        }
+        
+        .human-verification-content {
+            max-width: 600px;
+            width: 90%;
+            border-radius: 20px;
+            padding: 30px 40px;
+            background: #fff;
+            margin: 0 auto;
+            text-align: center;
+            border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4);
+        }
+        
+        .human-verification-content h2 {
+            color: #000;
+            font-size: 2.4em;
+            margin: 0 0 30px 0;
+        }
+        
+        .verification-app-icon-img {
+            max-width: 120px;
+            margin: 0 auto;
+            display: table;
+            border-radius: 50%;
+            border: 10px solid #eee;
+        }
+        
+        .verification-app-wrapper h3 {
+            color: #111;
+            margin: 10px 0 20px 0;
+            font-size: 1.8em;
+            font-weight: 300;
+        }
+        
+        .verification-app-wrapper h3 span {
+            display: block;
+            color: #1c99c1;
+            text-shadow: 2px 2px 0 #fff;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        
+        .human-verification-wrapper p {
+            color: #999;
+            font-size: 1.2em;
+            margin: 0 auto;
+            display: table;
+        }
+        
+        .human-verification-wrapper i {
+            font-size: 2.6em;
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            color: #ffc107;
+        }
+        
+        #verification-button {
+            color: #fff;
+        }
+        
+        .h-v-time-left-wrapper {
+            color: rgba(0, 0, 0, 0.3);
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        
+        #human_verification_timer_time {
+            color: #333;
+            display: block;
+            font-weight: 700;
+            line-height: 1;
+        }
+        /*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+        
+        .button-wrapper {
+            margin: 30px auto 0 auto;
+        }
+        
+        .button {
+            background: #003087;
+            display: table;
+            margin: 0 auto;
+            padding: 11px 7px 13px 14px;
+            color: #fff;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.4em;
+            letter-spacing: 1px;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+            text-decoration: none !important;
+            border: 2px solid #eee;
+            position: relative;
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently
+                                     supported by Chrome, Opera and Firefox */
+        }
+        
+        .button2 {
+            background: red;
+            display: table;
+            margin: 0 auto;
+            padding: 11px 7px 13px 14px;
+            color: #fff;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.4em;
+            letter-spacing: 1px;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+            text-decoration: none !important;
+            border: 2px solid #eee;
+            position: relative;
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently
+                                     supported by Chrome, Opera and Firefox */
+        }
+        
+        .button2:hover {
+            background: rgb(240, 65, 65);
+            color: #fff;
+        }
+        
+        .button:hover {
+            background: #10a9db;
+            color: #fff;
+        }
+        
+        .button span.lnr {
+            position: absolute;
+            left: 14px;
+            top: 30px;
+            font-size: 1em;
+            color: #fff;
+            -webkit-transition: all 0.2s ease-in-out 0s;
+            -moz-transition: all 0.2s ease-in-out 0s;
+            -ms-transition: all 0.2s ease-in-out 0s;
+            -o-transition: all 0.2s ease-in-out 0s;
+            font-weight: 400;
+            text-shadow: none;
+            transition: all 0.2s ease-in-out 0s;
+        }
+        
+        .button:hover span.lnr {
+            color: #fff;
+        }
+        
+        .cont {
+            padding: 5px 68px 8px 55px;
+            color: white;
+            background-color: rgba(80, 65, 65, 0.253);
+        }
+        /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+        
+        footer {
+            margin-top: 150px;
+            text-align: center;
+            padding: 5px 0;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1em;
+            position: relative;
+            z-index: 10;
+        }
+        /*--------------------------------------------------------------
+# Loader
+--------------------------------------------------------------*/
+        
+        .loader {
+            font-size: 90px;
+            text-indent: -9999em;
+            color: rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            margin: 45px auto;
+            position: relative;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+            animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+        }
+        
+        @-webkit-keyframes load6 {
+            0% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            5%,
+            95% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            10%,
+            59% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+            }
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+            }
+            100% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+        
+        @keyframes load6 {
+            0% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            5%,
+            95% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            10%,
+            59% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+            }
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+            }
+            100% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+        
+        @-webkit-keyframes round {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes round {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        /*--------------------------------------------------------------
+# Responsive Design
+--------------------------------------------------------------*/
+        
+        @media screen and (max-width: 550px) {
+            .logo-img {
+                max-width: 350px;
+            }
+            .app-download-wrapper {
+                padding: 50px 30px 60px 30px;
+            }
+            .app-icon-wrapper img {
+                max-width: 120px;
+            }
+            .button {
+                padding: 12px 15px 10px 45px;
+                letter-spacing: 0;
+            }
+            .button span.lnr {
+                font-size: 1em;
+                left: 12px;
+                top: 16px;
+            }
+        }
+        
+        @media screen and (max-width: 460px) {
+            .logo-img {
+                max-width: 300px;
+            }
+            .app-download-wrapper {
+                padding: 50px 20px 60px 20px;
+            }
+            .app-download-content h1 {
+                font-size: 1.5em;
+            }
+            .app-download-content-header span {
+                font-size: 1.6em;
+            }
+            .row-second {
+                display: none;
+            }
+            .app-download-main p.app-download-intro-text {
+                font-size: 1.2em;
+                max-width: 100%;
+            }
+            .button {
+                font-size: 1.2em;
+            }
+            .console-msg {
+                font-size: 1.8em;
+            }
+            .loading-files-wrapper .console-msg {
+                font-size: 2em;
+            }
+            .platform-select-text {
+                font-size: 1.4em;
+            }
+            .verification-app-wrapper h3 {
+                font-size: 1.5em;
+            }
+            .verification-app-wrapper h3 span {
+                font-size: 1.1em;
+            }
+            .human-verification-content {
+                padding: 30px 25px;
+            }
+        }
+        
+        @media screen and (max-width: 390px) {
+            .app-download-content h1 {
+                font-size: 1.3em;
+            }
+            .app-download-main p.app-download-intro-text {
+                font-size: 1.1em;
+            }
+            .console-msg {
+                font-size: 2em;
+                margin-top: 30px;
+            }
+        }
+        
+        @media screen and (max-width: 365px) {
+            .app-download-content h1 {
+                font-size: 1.2em;
+            }
+            .app-download-main p.app-download-intro-text {
+                font-size: 1em;
+            }
+            .button {
+                font-size: 1.1em;
+            }
+            .console-msg {
+                font-size: 1.5em;
+            }
+        }
+        
+        @media screen and (max-width: 340px) {
+            .app-download-content h1 {
+                font-size: 1.1em;
+            }
+            .button {
+                font-size: 1em;
+            }
+            .app-download-wrapper {
+                padding: 80px 20px 70px 20px;
+            }
+            .console-msg {
+                font-size: 1.4em;
+            }
+            .generator-header {
+                font-size: 1.6em;
+            }
+            .human-verification-wrapper p {
+                font-size: 1em;
+            }
+        }
+        
+        b,
+        strong {
+            color: #10a9db;
+            font-weight: bolder;
+        }
