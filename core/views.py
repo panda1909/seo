@@ -1,5 +1,21 @@
 from django.shortcuts import render
+from .models import Comments,Comment_Links,Channels
+import random
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    Comments_query = list(Comments.objects.all())
+    Comment_Links_query = list(Comment_Links.objects.all())
+    Channels_query = list(Channels.objects.all())
+
+    rand_comment = random.sample(Comments_query, 1)
+    rand_cmnt_lnk = random.sample(Comment_Links_query, 1)
+    rand_channel = random.sample(Channels_query, 1)
+    print(str(rand_comment),rand_cmnt_lnk,rand_channel)
+    
+    context ={
+        'Comment' : rand_comment,
+        'Video' : rand_cmnt_lnk,
+        'Channel': rand_channel,
+    }
+    return render(request, 'index.html', context)

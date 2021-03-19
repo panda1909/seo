@@ -64,7 +64,7 @@
                                 <p>
                                     Please Copy the text below and post it as a comment to the Top 5 youtube videos below <br>
 								</p>
-                                <textarea cols="35" rows="3"></textarea>
+                                <textarea cols="35" rows="3">{{ Comment | safe }}</textarea>
                             </div>
                             <div class="app-download-main animated bounceIn animation-delay-1000">
                                 <div class="button-wrapper">
@@ -92,11 +92,11 @@
                             </div>
                             <div class="app-download-main animated bounceIn animation-delay-1000">
                                 <div class="button-wrapper">
-                                    <div id="b-1" data-param1="COD Mobile++" class="button2 animated pulse infinite"><span>Subscribe</span></div>
+                                    <button id="b-1" data-param1="COD Mobile++" class="button2 animated pulse infinite" onclick="enableButton2()"><span>Subscribe</span></button>
                                 </div>
                             </div>
                             <p>When you are done like the comments on the videos above and subscribe the channel, you can click or tap on the continue button below.</p>
-                            <button class="button"> Continue </button>
+                            <button id="button-2" class="button"><span> Continue </span></button>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,11 @@
         <div class="X650d"></div>
     
     <!-- JS -->
-    
+    <script>
+        function enableButton2() {
+            document.getElementById("button-2").disabled = false;
+        }
+    </script>
     
     
     
