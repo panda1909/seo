@@ -11,11 +11,11 @@ def home(request):
     rand_comment = random.sample(Comments_query, 1)
     rand_cmnt_lnk = random.sample(Comment_Links_query, 1)
     rand_channel = random.sample(Channels_query, 1)
-    print(str(rand_comment),rand_cmnt_lnk,rand_channel)
+    print(rand_comment[0],rand_cmnt_lnk[0],rand_channel[0])
     
     context ={
-        'Comment' : rand_comment,
-        'Video' : rand_cmnt_lnk,
-        'Channel': rand_channel,
+        'Comment' : rand_comment[0],
+        'Video' : rand_cmnt_lnk[0],
+        'Channel': rand_channel[0],
     }
     return render(request, 'index.html', context)
