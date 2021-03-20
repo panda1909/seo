@@ -20,67 +20,6 @@ Username : admin
 Password : zsexdr321
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 For changing Background Image:
     you can change the background image by placing image in "static" folder in the project, rename your background image with this "main-bg.jpg" if you rename your image before placing in static folder than you dont have to change anything in code.
 
